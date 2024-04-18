@@ -1,14 +1,43 @@
-<div class="row">
 
 
-    <div class="col-6" *ngFor="let step of stepsEscena">
-      <h3>{{ step.title }}</h3>
-      <p>{{ step.description }}</p>
+
+  <div *ngFor="let step of stepsEscena; let i = index">
+
+    <div *ngIf="i === currentStep">
+      <div class="row">
+        <div class="col-4 card mx-auto">
+          <div [ngStyle]="{'background-color': step.bgcolor}">
+            <img class="card-img-top img-fluid" src="{{step.img}}" alt="">
+          </div>
+
+          <div class="card-body"></div>
+          <h3 class="card-title"><strong>{{ step.title }}</strong></h3>
+          <p class="card-text">{{ step.description }}</p>
+          <div class="d-flex justify-content-between mb-2">
+            <div class="scroll">
+              <div class="ball" [ngClass]="{ 'active': currentStep === 0 }"></div>
+              <div class="ball" [ngClass]="{ 'active': currentStep === 1 }" ></div>
+              <div class="ball" [ngClass]="{ 'active': currentStep === 2 }"></div>
+            </div>
+            <div class="butt-control">
+              <div *ngIf="currentStep !== 0" (click)="decreaseBy()" class="btn round-black">
+                <img src="../assets/left.png" alt="">
+              </div>
+              <div *ngIf="currentStep !== 2" (click)="increaseBy()" class="btn round-black">
+                <img src="../assets/right.png" alt="">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
   </div>
 
 
-</div>
+
 
 

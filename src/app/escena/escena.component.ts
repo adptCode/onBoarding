@@ -11,7 +11,19 @@ import { CommonModule } from '@angular/common';
 })
 export class EscenaComponent {
 
-  @Input() stepsEscena: iStep[] = []
+  @Input() stepsEscena: iStep[] = [];
+
+  public currentStep = 0;
+
+  increaseBy():void {
+    this.currentStep ++
+    console.log(this.currentStep)
+  }
+
+  decreaseBy():void {
+    this.currentStep --
+    console.log(this.currentStep)
+  }
 
 
 
