@@ -15,9 +15,9 @@
           <p class="card-text">{{ step.description }}</p>
           <div class="d-flex justify-content-between mb-2">
             <div class="scroll">
-              <div class="ball" [ngClass]="{ 'active': currentStep === 0 }"></div>
-              <div class="ball" [ngClass]="{ 'active': currentStep === 1 }" ></div>
-              <div class="ball" [ngClass]="{ 'active': currentStep === 2 }"></div>
+              <div (click)="setCurrentStepTo(0)" class="ball" [ngClass]="{ 'active': currentStep === 0 }"></div>
+              <div (click)="setCurrentStepTo(1)" class="ball" [ngClass]="{ 'active': currentStep === 1 }" ></div>
+              <div (click)="setCurrentStepTo(2)" class="ball" [ngClass]="{ 'active': currentStep === 2 }"></div>
             </div>
             <div class="butt-control">
               <div *ngIf="currentStep !== 0" (click)="decreaseBy()" class="btn round-black">

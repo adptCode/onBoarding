@@ -25,6 +25,10 @@ export class EscenaComponent {
     console.log(this.currentStep)
   }
 
+  setCurrentStepTo(x:number) {
+    this.currentStep = x
+  }
+
 
 
 }
