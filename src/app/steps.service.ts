@@ -27,5 +27,9 @@ export class StepsService {
     }
   ]
 
+  getSteps() {
+    return this.steps
+  }
+
   constructor() { }
 }

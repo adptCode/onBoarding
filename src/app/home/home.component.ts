@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { EscenaComponent } from './../escena/escena.component';
+import { iStep } from '../interfaces/iStep';
+import { StepsService } from '../steps.service';
 
 @Component({
   selector: 'app-home',
@@ -10,4 +12,7 @@ import { EscenaComponent } from './../escena/escena.component';
 })
 export class HomeComponent {
 
+ constructor(private stepsService: StepsService) {}
+
+ steps = this.stepsService.steps
 }
