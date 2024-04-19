@@ -30,8 +30,12 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 To run the project locally, follow these steps:
 
-Clone this repository.
-Navigate to the project directory.
-Install Dependencies: npm install
-Run the Angular Development Server: ng serve
-Open your browser and go to http://localhost:4200/ to view the application.
+1.Clone this repository.
+
+2.Navigate to the project directory.
+
+3. Install Dependencies: npm install
+
+4.Run the Angular Development Server: ng serve
+
+5.Open your browser and go to http://localhost:4200/ to view the application.
