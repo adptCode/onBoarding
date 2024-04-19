@@ -1,61 +1,53 @@
 <div *ngFor="let step of stepsEscena; let i = index">
-
   <div *ngIf="i === currentStep">
-
     <div class="row">
-
       <div class="col-8 col-md-5 col-lg-3 mx-auto mt-5">
-
         <div class="card">
-
-          <div [ngStyle]="{'background-color': step.bgcolor}">
-            <img class="card-img-top img-fluid" src="{{step.img}}" alt="sfondo">
+          <div [ngStyle]="{ 'background-color': step.bgcolor }">
+            <img
+              class="card-img-top img-fluid"
+              src="{{ step.img }}"
+              alt="sfondo"
+            />
           </div>
 
           <div class="card-body">
-            <h3 class="card-title"><strong>{{ step.title }}</strong></h3>
+            <h3 class="card-title">
+              <strong>{{ step.title }}</strong>
+            </h3>
             <p class="card-text">{{ step.description }}</p>
 
             <div class="d-flex justify-content-between mb-2">
-
               <div class="scroll">
-                <div *ngFor="let step of stepsEscena; let i = index" (click)="setCurrentStepTo(i)" class="ball" [ngClass]="{ 'active': currentStep === i }"></div>
+                <div
+                  *ngFor="let step of stepsEscena; let i = index"
+                  (click)="setCurrentStepTo(i)"
+                  class="ball"
+                  [ngClass]="{ active: currentStep === i }"
+                ></div>
               </div>
 
               <div class="d-flex">
-                <button *ngIf="currentStep !== 0" (click)="decreaseBy()" class="custom-btn btn btn-light">
+                <button
+                  *ngIf="currentStep !== 0"
+                  (click)="decreaseBy()"
+                  class="custom-btn btn btn-light"
+                >
                   <i class="fas fa-arrow-left text-dark"></i>
                 </button>
 
-                <button *ngIf="currentStep !== stepsEscena.length - 1" (click)="increaseBy()" class="custom-btn btn btn-dark">
+                <button
+                  *ngIf="currentStep !== stepsEscena.length - 1"
+                  (click)="increaseBy()"
+                  class="custom-btn btn btn-dark"
+                >
                   <i class="fas fa-arrow-right text-light"></i>
                 </button>
-
               </div>
-
-
-              <!--
-              <div class="butt-control  pe-1">
-                <div *ngIf="currentStep !== 0" (click)="decreaseBy()" class="btn round-black">
-                  <img class="img-fluid" src="../assets/left.png" alt="">
-                </div>
-                <div *ngIf="currentStep !== stepsEscena.length - 1" (click)="increaseBy()" class="btn round-black">
-                  <img class="img-fluid" src="../assets/right.png" alt="">
-                </div>
-              </div>
-              -->
-
             </div>
           </div>
-
         </div>
-
-
-
       </div>
     </div>
   </div>
-
-
-
 </div>
