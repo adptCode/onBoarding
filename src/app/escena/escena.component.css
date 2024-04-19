@@ -1,7 +1,7 @@
 .card {
   border-radius: 20px;
   animation-name: scrolling;
-  animation-duration: 500ms;
+  animation-duration: 600ms;
 }
 
 @keyframes scrolling {
