@@ -25,3 +25,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Instructions
+
+To run the project locally, follow these steps:
+
+1.Clone this repository.
+
+2.Navigate to the project directory.
+
+3. Install Dependencies: npm install
+
+4.Run the Angular Development Server: ng serve
+
+5.Open your browser and go to http://localhost:4200/ to view the application.
