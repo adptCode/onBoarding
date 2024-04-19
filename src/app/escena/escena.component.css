@@ -1,7 +1,19 @@
 .card {
   border-radius: 20px;
+  animation-name: scrolling;
+  animation-duration: 500ms;
 }
 
+@keyframes scrolling {
+  0% {
+    transform: translateX(-80%);
+    opacity: 10%;
+  }
+  100% {
+    transform: translateX(80%);
+    opacity: 100%;
+  }
+}
 .scroll {
   display: flex;
   justify-content: center;
