@@ -1,7 +1,5 @@
-
-.round-black {
-  background-color: black;
-  border-radius: 50%;
+.card {
+  border-radius: 20px;
 }
 
 .scroll {
@@ -25,8 +23,16 @@
   transform: scale(1.9);
 }
 
-.butt-control {
+.custom-btn {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  border: 2px solid black;
+}
+
+.custom-btn i {
+  font-size: 20px;
 }
