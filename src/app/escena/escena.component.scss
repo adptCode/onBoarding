@@ -4,6 +4,11 @@
   animation-duration: 600ms;
 }
 
+.card-img-round {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
 @keyframes scrolling {
   0% {
     transform: translateX(-80%);
